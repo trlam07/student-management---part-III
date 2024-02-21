@@ -3,9 +3,11 @@ let students = [];
 const addNewStudent = () => {
     let newStudent = getStudentInfo();
     students.push(newStudent);
-    renderStudents(students)
+    renderStudents(students);
+    document.getElementById('student-form').reset();
 }
 
 const resetStudents = () => {
-    console.log('reset students')
+    students = [];
+    renderStudents(students)
 }
